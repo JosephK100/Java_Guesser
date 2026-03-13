@@ -1,6 +1,6 @@
 # Java_Guesser
 -Pseudocode/Algorithm-
-
+```
 -Menu/Main Loop-
     Display a menu that gives the user three options:
         0: Exit
@@ -55,3 +55,4 @@ Computer Guesser
     End Loop.
     If attempt > 7:
         Print "I ran out of guesses."
+```
