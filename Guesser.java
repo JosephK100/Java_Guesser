@@ -5,6 +5,7 @@
 import java.util.Scanner;
 
 public class Guesser{
+	Scanner kb = new Scanne(System.in);
 	public Guesser(){
 		Scanner kb = new Scanner(System.in);
 		int choice = -1;
@@ -26,7 +27,6 @@ public class Guesser{
 		}
 	}
     }
-}
 
 	public void printMenu(){
 		System.out.println("0) Exit");
