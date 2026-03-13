@@ -40,6 +40,8 @@ public class Guesser{
 		int userGuess = 0;
 		int answer = (int)(Math.random() * 100) + 1;
 		System.out.println("Let's play a guessing game.");
+		
+		boolean correct = false;
 		while (guesses < 7 && !correct){
 			System.out.print("What is your guess? : ");
 			userGuess = kb.nextInt();
@@ -48,18 +50,43 @@ public class Guesser{
 				System.out.println("That's too low.");
 			} else if (userGuess > answer){
 				System.out.println("That's too high.");
-			} else if (userGuess == answer){
+			} else { 
 				System.out.println("You got it!!");
+				correct = true;
 			}
 			guesses++;
 		}
-		if (guesses == 7 && userGuess != aanswer){
+		if (!correct){
 			System.out.println("You're out of guesses.");
 		}	
 	}
 	
 	public void computerGuesser(){
-		//Placeholder stuff
+		int low = 1;
+		int high = 100;
+		int attempt = 0;
+		boolean correct = false;
+
+		while (attempt < 7 && !correct){
+			int guess = (low + high) / 2;
+			System.out.println("I guess " + guess + ".");
+			System.out.print("Is your number (H)igher, (L)ower, or (C)orrect? ");
+			String response = kb.next().toUpperCase();
+
+			if (response.equals("H")){
+				low = guess + 1;
+			} else if (response.euals("L")){
+				high = guess - 1;
+			} else if (response.equals("C")){
+				System.out.println("I got it!");
+				correct = true;
+			}
+			
+			attempts++;
+		}
+		if (!correct){
+			System.out.println("I'm out of guesses.");
+		}
 	}
 
 	public static void main(String[] args){
