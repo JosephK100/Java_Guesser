@@ -5,7 +5,7 @@
 import java.util.Scanner;
 
 public class Guesser{
-	Scanner kb = new Scanne(System.in);
+	Scanner kb = new Scanner(System.in);
 	public Guesser(){
 		Scanner kb = new Scanner(System.in);
 		int choice = -1;
@@ -75,14 +75,14 @@ public class Guesser{
 
 			if (response.equals("H")){
 				low = guess + 1;
-			} else if (response.euals("L")){
+			} else if (response.equals("L")){
 				high = guess - 1;
 			} else if (response.equals("C")){
 				System.out.println("I got it!");
 				correct = true;
 			}
 			
-			attempts++;
+			attempt++;
 		}
 		if (!correct){
 			System.out.println("I'm out of guesses.");
@@ -92,4 +92,4 @@ public class Guesser{
 	public static void main(String[] args){
 		new Guesser();
 	}
-
+}
