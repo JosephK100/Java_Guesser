@@ -32,11 +32,30 @@ public class Guesser{
 		System.out.println("0) Exit");
 		System.out.println("1) Human Guesser");
 		System.out.println("2 Computer Guesser");
-		System.out.println("Please choose 0-2: ");
+		System.out.println("Please enter 0-2: ");
 	}
 	
 	public void humanGuesser(){
-		//Placeholder stuff
+		int guesses = 0;
+		int userGuess = 0;
+		int answer = (int)(Math.random() * 100) + 1;
+		System.out.println("Let's play a guessing game.");
+		while (guesses < 7 && !correct){
+			System.out.print("What is your guess? : ");
+			userGuess = kb.nextInt();
+
+			if (userGuess < answer){
+				System.out.println("That's too low.");
+			} else if (userGuess > answer){
+				System.out.println("That's too high.");
+			} else if (userGuess == answer){
+				System.out.println("You got it!!");
+			}
+			guesses++;
+		}
+		if (guesses == 7 && userGuess != aanswer){
+			System.out.println("You're out of guesses.");
+		}	
 	}
 	
 	public void computerGuesser(){
