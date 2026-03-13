@@ -8,7 +8,7 @@ public class Guesser{
 	public Guesser(){
 		Scanner kb = new Scanner(System.in);
 		int choice = -1;
-		boolean keepGoing = true
+		boolean keepGoing = true;
 	
 		while (keepGoing){
 			printMenu();
