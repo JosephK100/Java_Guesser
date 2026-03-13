@@ -72,7 +72,7 @@ public class Guesser{
 		}
 		if (!correct){
 			System.out.println("You're out of guesses.");
-		}	
+		}
 	}
 	/*
 	 * Computer guesser
